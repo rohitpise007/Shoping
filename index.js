@@ -16,9 +16,9 @@ app.use(cookieParser());
 app.use(express.static(path.join(__dirname, "public")));
 app.set("view engine", "ejs");
 
-app.use("/create", ownerRouter);
-app.use("/create", userRouter);
-app.use("/create", productRouter);
+app.use("/owner", ownerRouter);
+app.use("/product", productRouter);
+app.use("/user", userRouter);
 
 
-app.listen(5000, () => console.log("Server running on port 3000"));
+app.listen(5000, () => console.log("Server running on port 5000"));
